@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+html body {
+  height: 100vh;
+}
+
+.app {
+  font-family: "Roboto Mono", monospace;
+  height: 100%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+}
+.app header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app header .navdiv {
+  width: 100%;
+}
+.app header .navdiv .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.app header .navdiv .nav .brand {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.app header .navdiv .nav .routes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}
+.app header .navdiv .nav .routes .route {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.app aside {
+  margin-top: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20em;
+}
+.app aside .profilediv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+.app aside .profilediv .image img {
+  background-color: coral;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100%;
+}
+.app aside .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+.app aside .info .greeting {
+  font-size: clamp(20px, 2vw, 2vw);
+}
+.app aside .info .sub_greeting {
+  color: grey;
+  font-size: 1.2rem;
+}
+.app main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app main .exps {
+  width: 100%;
+}
+.app main .exps .exp_title {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.app main .exps .experiencediv {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 2em;
+}
+.app main .exps .experiencediv .experience {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  gap: 2em;
+  width: 400px;
+}
+.app main .exps .experiencediv .experience .exp_img {
+  height: 5rem;
+  width: 5rem;
+}
+.app main .exps .experiencediv .experience .exp_info h4 {
+  margin: 0;
+}
+.app main .exps .experiencediv .experience .exp_info .exp_name {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */

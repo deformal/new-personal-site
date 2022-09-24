@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+$font-family: "Roboto Mono", monospace;
+html body {
+  height: 100vh;
+}
+.app {
+  font-family: $font-family;
+  height: 100%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .navdiv {
+      width: 100%;
+      .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .brand {
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+        .routes {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2em;
+          .route {
+            cursor: pointer;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+  aside {
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20em;
+    .profilediv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3em;
+      .image {
+        img {
+          background-color: coral;
+          object-fit: cover;
+          height: 20rem;
+          width: 20rem;
+          border-radius: 100%;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 1rem;
+      .greeting {
+        font-size: clamp(20px, 2vw, 2vw);
+      }
+      .sub_greeting {
+        color: grey;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .exps {
+      width: 100%;
+      .exp_title {
+        text-align: center;
+        margin-bottom: 10rem;
+      }
+      .experiencediv {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 2em;
+        .experience {
+          border: 1px solid grey;
+          border-radius: 5px;
+          padding: 1em;
+          display: flex;
+          flex-direction: row;
+          justify-content: baseline;
+          align-items: center;
+          gap: 2em;
+          width: 400px;
+          .exp_img {
+            height: 5rem;
+            width: 5rem;
+          }
+          .exp_info {
+            h4 {
+              margin: 0;
+            }
+            .exp_name {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
