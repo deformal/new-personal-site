@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LandingSection from "../../components/landingSection";
 import Profile from "../../components/profile";
-import Experience from "../../components/experience";
+import Data from "../../components/data";
 import "./style.css";
 import me from "../images/me.png";
 import { StaticQuery, graphql } from "gatsby";
@@ -29,6 +29,21 @@ export default function Home() {
                   logo
                 }
               }
+              allProjectJson {
+                nodes {
+                  id
+                  name
+                  description
+                  stack
+                  links
+                  logo
+                  downloads {
+                    link
+                    type
+                    logo
+                  }
+                }
+              }
               allImageSharp {
                 edges {
                   node {
@@ -38,10 +53,22 @@ export default function Home() {
               }
             }
           `}
-          render={(data) => <Experience data={data} />}
+          render={(data) => <Data data={data} />}
         />
       </main>
       <br />
     </div>
   );
 }
+export const Head = () => {
+  return (
+    <>
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="https://wave-runner.s3.ap-south-1.amazonaws.com/gitProfile.ico"
+      />
+      <title>saurabhjainwalapi.in</title>
+    </>
+  );
+};

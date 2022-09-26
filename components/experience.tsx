@@ -31,14 +31,17 @@ export default function Experience(props: { data: any }) {
   }
   return (
     <div className="exps">
-      <h1 className="exp_title">Experience</h1>
+      <h1 className="exp_title">
+        Experience{" "}
+        <span className="exp_sidenote">(just getting started 💪)</span>{" "}
+      </h1>
       <div className="experiencediv">
         {final.map((node) => (
           <div className="experience" key={node.id}>
             <GatsbyImage
               className="exp_img"
               image={node.logo.gatsbyImageData as IGatsbyImageData}
-              alt="hey"
+              alt="sorry no image available"
             />
             <div className="exp_info">
               <h4 className="exp_name">{node.name}</h4>

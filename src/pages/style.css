@@ -6,9 +6,7 @@ html body {
 .app {
   font-family: "Roboto Mono", monospace;
   height: 100%;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-bottom: 5rem;
+  margin: 0 20vw 0 20vw;
 }
 .app header {
   display: flex;
@@ -17,6 +15,11 @@ html body {
 }
 .app header .navdiv {
   width: 100%;
+}
+.app header .navdiv .menu .flash {
+  margin: 0;
+  font-size: 2rem;
+  cursor: pointer;
 }
 .app header .navdiv .nav {
   display: flex;
@@ -43,7 +46,7 @@ html body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 20em;
+  margin-bottom: 30%;
 }
 .app aside .profilediv {
   display: flex;
@@ -82,20 +85,34 @@ html body {
 }
 .app main .exps {
   width: 100%;
+  margin-bottom: 20vh;
 }
 .app main .exps .exp_title {
-  text-align: center;
-  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.5em;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 4em;
+}
+.app main .exps .exp_title .exp_sidenote {
+  margin: 0;
+  font-size: 1rem;
 }
 .app main .exps .experiencediv {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   flex-wrap: wrap;
   row-gap: 2em;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  justify-content: center;
 }
 .app main .exps .experiencediv .experience {
+  flex-basis: 40%;
+  min-width: 400px;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1em;
@@ -115,4 +132,103 @@ html body {
 }
 .app main .exps .experiencediv .experience .exp_info .exp_name {
   font-size: 1.5rem;
+}
+.app main .projects {
+  width: 100%;
+}
+.app main .projects .prj_title {
+  text-align: center;
+  margin-bottom: 4em;
+}
+.app main .projects .prjdiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2em;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  justify-content: center;
+}
+.app main .projects .prjdiv .prj {
+  flex-basis: 100%;
+  min-width: 400px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 2em;
+  width: 400px;
+}
+.app main .projects .prjdiv .prj .prj_img {
+  height: 6rem;
+  width: 6rem;
+}
+.app main .projects .prjdiv .prj .prj_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app main .projects .prjdiv .prj .prj_info h4 {
+  margin: 0;
+}
+.app main .projects .prjdiv .prj .prj_info .prj_name {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+.app main .projects .prjdiv .prj .prj_info .prj_description {
+  font-size: clamp(16px, 1.1vw, 1.1vw);
+}
+.app main .projects .prjdiv .prj .prj_info .git_link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: Black;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 1px solid black;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+.app main .projects .prjdiv .prj .prj_info .git_link .git_img {
+  height: 2rem;
+  width: 2rem;
+}
+.app main .projects .prjdiv .prj .prj_info .git_link:hover {
+  transform: scale(1.04);
+}
+.app main .projects .prjdiv .prj .prj_info .download_btn {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+}
+.app main .projects .prjdiv .prj .prj_info .download_btn .git_img {
+  height: 2rem;
+  width: 2rem;
+}
+.app main .projects .prjdiv .prj .prj_info .download_btn:hover {
+  transform: scale(1.04);
+}
+
+@media only screen and (max-width: 1000px) {
+  .app {
+    margin: 0 5vw 0 5vw;
+  }
 }/*# sourceMappingURL=style.css.map */

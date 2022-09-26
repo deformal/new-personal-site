@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Wave Runner",
+    "description": "An Android/Pc game built with C# & Unity Engine, about dodging obstacles and collecting points.",
+    "stack": "C#, Unity Engine",
+    "downloads": [
+      {
+        "link": "https://wave-runner.s3.ap-south-1.amazonaws.com/WaveApk.apk",
+        "type": "android",
+        "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/android.png"
+      },
+      {
+        "link": "https://wave-runner.s3.ap-south-1.amazonaws.com/WavePc.zip",
+        "type": "pc",
+        "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/windows.png"
+      }
+    ],
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/unity.png"
+  },
+  {
+    "name": "TGP",
+    "description": "Node cli tool that quickly sets up a Typescript based GraphQl server which uses Apollo for GraphQl and Prisma as orm.",
+    "stack": "Node.JS",
+    "links": "https://github.com/deformal/tgp",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png"
+  },
+  {
+    "name": "SJ-server-client",
+    "description": "A cli tool to create a basic express and react template, folder structure for beginners.",
+    "stack": "Node.JS",
+    "links": "https://github.com/deformal/sj-server-client",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png"
+  },
+  {
+    "name": "Issue-Tracker",
+    "description": "A graphql based issue tracking web application. Built with SSR-React, GraphQl, Express.",
+    "stack": "Node, MongoDB, GraphQl",
+    "links": "https://github.com/deformal/The-Issue-Tracker-app.git",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/node-js.png"
+  }
+]

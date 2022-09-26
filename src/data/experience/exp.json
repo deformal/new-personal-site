@@ -10,9 +10,23 @@
   {
     "name": "Raftlabs",
     "link": "https://raftlabs.co",
-    "role": "Software Engineer intern",
+    "role": "Software Engineer Intern",
     "dates": "October 2021 - Jan 2022",
     "job_type": "internship",
     "logo": "raftlabs"
+  },
+  {
+    "name": "Taxvisor",
+    "role": "Node.js Developer Intern",
+    "dates": "April 2021 - September 2021",
+    "job_type": "internship",
+    "logo": "taxvisor"
+  },
+  {
+    "name": "I.G.N.O.U",
+    "role": "Bachelor's of Computer Applications",
+    "dates": "Jan 2018 - Dec 2021",
+    "job_type": "internship",
+    "logo": "ignou"
   }
 ]
