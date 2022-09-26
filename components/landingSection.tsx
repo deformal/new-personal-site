@@ -7,8 +7,9 @@ const Burger = () => {
   );
 };
 export default function LandingSection() {
-  const [currentWidth, setWidth] = useState<number>(window.innerWidth);
+  const [currentWidth, setWidth] = useState<number>(0);
   useEffect(() => {
+    setWidth(window.innerWidth);
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     return () =>
       window.removeEventListener("resize", () => setWidth(window.innerWidth));
