@@ -5,7 +5,7 @@
     "role": "Backend Engineer",
     "dates": "Jan 2022 - Present",
     "job_type": "full time",
-    "logo": "raftlabs"
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/raftlabs.png"
   },
   {
     "name": "Raftlabs",
@@ -13,20 +13,20 @@
     "role": "Software Engineer Intern",
     "dates": "Oct 2021 - Jan 2022",
     "job_type": "internship",
-    "logo": "raftlabs"
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/raftlabs.png"
   },
   {
     "name": "Taxvisor",
     "role": "Node.js Developer Intern",
     "dates": "Apr 2021 - Sep 2021",
     "job_type": "internship",
-    "logo": "taxvisor"
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/taxvisor.png"
   },
   {
     "name": "I.G.N.O.U",
     "role": "Bachelor's of Computer Applications",
     "dates": "Jan 2018 - Dec 2021",
     "job_type": "internship",
-    "logo": "ignou"
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/ignou.png"
   }
 ]

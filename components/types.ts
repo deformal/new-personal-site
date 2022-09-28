@@ -40,7 +40,6 @@ export interface DataProps {
         ]
       }>
     }
-    allImageSharp: any
   }
 }
 
@@ -59,5 +58,37 @@ export type FooterData = {
         social: string
       },
     ]
+  }
+}
+export type ExperienceData = {
+  allExpJson: {
+    nodes: Array<{
+      id: string
+      name: string
+      link: string
+      role: string
+      dates: string
+      job_type: string
+      logo: any | IGatsbyImageData
+    }>
+  }
+}
+export type ProjectData = {
+  allProjectJson: {
+    nodes: Array<{
+      id: string
+      name: string
+      links: string
+      description: string
+      stack: string
+      logo: string
+      downloads: [
+        {
+          link: string
+          type: string
+          logo: string
+        },
+      ]
+    }>
   }
 }

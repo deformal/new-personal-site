@@ -3,7 +3,6 @@ import LandingSection from "../../components/landingSection";
 import Profile from "../../components/profile";
 import Data from "../../components/data";
 import "./style.css";
-import me from "../images/me.png";
 import { StaticQuery, graphql } from "gatsby";
 export default function Home() {
   return (
@@ -12,7 +11,9 @@ export default function Home() {
         <LandingSection />
       </header>
       <aside>
-        <Profile imageref={me} />
+        <Profile
+          imageref={"https://wave-runner.s3.ap-south-1.amazonaws.com/me.png"}
+        />
       </aside>
       <main>
         <StaticQuery
@@ -50,13 +51,6 @@ export default function Home() {
                   logo
                   link
                   social
-                }
-              }
-              allImageSharp {
-                edges {
-                  node {
-                    gatsbyImageData
-                  }
                 }
               }
             }

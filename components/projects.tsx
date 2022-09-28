@@ -1,5 +1,5 @@
-import React from "react";
-import { DataProps, DownloadButton } from "./types";
+import React, { useState } from "react";
+import { DataProps, DownloadButton, ProjectData } from "./types";
 const Download = (props: DownloadButton) => {
   return (
     <a type="button" className="download_btn" href={props.link}>
@@ -20,7 +20,7 @@ const Link = (props: { link: string }) => {
     </a>
   );
 };
-export default function Projects(props: DataProps) {
+export default function Projects(props: { data: ProjectData }) {
   return (
     <div id="projects" className="projects">
       <h1 className="prj_title">Projects 📽</h1>
