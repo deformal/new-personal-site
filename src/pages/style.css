@@ -6,7 +6,7 @@ html body {
 .app {
   font-family: "Roboto Mono", monospace;
   height: 100%;
-  margin: 0 20vw 0 20vw;
+  margin: 0 15vw 0 15vw;
 }
 .app header {
   display: flex;
@@ -17,9 +17,27 @@ html body {
   width: 100%;
 }
 .app header .navdiv .menu .flash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   font-size: 2rem;
   cursor: pointer;
+}
+.app header .navdiv .menu .flash .routes_min {
+  background-color: rgb(244, 244, 244);
+  border-radius: 5px;
+  padding: 10px;
+  top: 2em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.app header .navdiv .menu .flash .routes_min .route_min {
+  font-size: 0.5em;
+  text-decoration: none;
+  color: black;
 }
 .app header .navdiv .nav {
   display: flex;
@@ -30,8 +48,11 @@ html body {
 .app header .navdiv .nav .brand {
   font-size: 1.5em;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .app header .navdiv .nav .routes {
+  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,6 +61,8 @@ html body {
 .app header .navdiv .nav .routes .route {
   cursor: pointer;
   font-size: 1.2em;
+  text-decoration: none;
+  color: black;
 }
 .app aside {
   margin-top: 10em;
@@ -112,7 +135,6 @@ html body {
 }
 .app main .exps .experiencediv .experience {
   flex-basis: 40%;
-  min-width: 400px;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1em;
@@ -120,8 +142,8 @@ html body {
   flex-direction: row;
   justify-content: baseline;
   align-items: center;
+  min-width: 300px;
   gap: 2em;
-  width: 400px;
 }
 .app main .exps .experiencediv .experience .exp_img {
   height: 5rem;
@@ -151,7 +173,6 @@ html body {
 }
 .app main .projects .prjdiv .prj {
   flex-basis: 100%;
-  min-width: 400px;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1em;
@@ -159,7 +180,6 @@ html body {
   flex-direction: column;
   justify-content: baseline;
   gap: 2em;
-  width: 400px;
 }
 .app main .projects .prjdiv .prj .prj_img {
   height: 6rem;
@@ -226,9 +246,52 @@ html body {
 .app main .projects .prjdiv .prj .prj_info .download_btn:hover {
   transform: scale(1.04);
 }
+.app main .social_div {
+  margin-top: 10em;
+}
+.app main .social_div .social_title {
+  font-weight: lighter;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.app main .social_div .socials {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.app main .social_div .socials .social {
+  cursor: pointer;
+}
+.app main .social_div .socials .social .social_img {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.app main .social_div .social_message {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+}
+.app main .social_div .social_message p {
+  margin: 0;
+}
+.app main .social_div .social_message .social_mail {
+  color: skyblue;
+}
+.app main .social_div .social_message .social_gatsby a {
+  color: skyblue;
+}
 
 @media only screen and (max-width: 1000px) {
   .app {
     margin: 0 5vw 0 5vw;
+  }
+  .routes_min {
+    right: 1em;
   }
 }/*# sourceMappingURL=style.css.map */

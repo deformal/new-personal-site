@@ -13,6 +13,16 @@ export interface DataProps {
         logo: any | IGatsbyImageData
       }>
     }
+    allContactJson: {
+      nodes: [
+        {
+          id: string
+          logo: string
+          link: string
+          social: string
+        },
+      ]
+    }
     allProjectJson: {
       nodes: Array<{
         id: string
@@ -38,4 +48,16 @@ export type DownloadButton = {
   link: string
   type: string
   logo: string
+}
+export type FooterData = {
+  allContactJson: {
+    nodes: [
+      {
+        id: string
+        logo: string
+        link: string
+        social: string
+      },
+    ]
+  }
 }

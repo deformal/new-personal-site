@@ -30,7 +30,7 @@ export default function Experience(props: { data: any }) {
     }
   }
   return (
-    <div className="exps">
+    <div id="experience" className="exps">
       <h1 className="exp_title">
         Experience{" "}
         <span className="exp_sidenote">(just getting started 💪)</span>{" "}

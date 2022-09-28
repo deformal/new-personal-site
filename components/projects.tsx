@@ -22,7 +22,7 @@ const Link = (props: { link: string }) => {
 };
 export default function Projects(props: DataProps) {
   return (
-    <div className="projects">
+    <div id="projects" className="projects">
       <h1 className="prj_title">Projects 📽</h1>
       <div className="prjdiv">
         {props.data.allProjectJson.nodes.map((node) => (
@@ -34,11 +34,11 @@ export default function Projects(props: DataProps) {
               {node.links ? (
                 <Link link={node.links} />
               ) : node.downloads ? (
-                node.downloads.map((x) => (
+                node.downloads.map((x, index: number) => (
                   <Download
                     link={x.link}
                     type={x.type}
-                    key={node.id}
+                    key={`${node.id}_${index}`}
                     logo={x.logo}
                   />
                 ))

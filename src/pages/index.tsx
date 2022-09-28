@@ -44,6 +44,14 @@ export default function Home() {
                   }
                 }
               }
+              allContactJson {
+                nodes {
+                  id
+                  logo
+                  link
+                  social
+                }
+              }
               allImageSharp {
                 edges {
                   node {

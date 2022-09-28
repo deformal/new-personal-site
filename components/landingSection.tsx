@@ -1,8 +1,34 @@
 import React, { useEffect, useState } from "react";
+const Menu = (props: { className: boolean }) => {
+  return (
+    <div className={props.className ? "routes_min" : "routes"}>
+      <a href="#experience" className={props.className ? "route_min" : "route"}>
+        Experience 📖
+      </a>
+      <a href="#projects" className={props.className ? "route_min" : "route"}>
+        Projects ⚙️
+      </a>
+      <a href="#social" className={props.className ? "route_min" : "route"}>
+        Contact 📇
+      </a>
+    </div>
+  );
+};
 const Burger = () => {
+  const [active, setActive] = useState<boolean>(false);
+  const handler = () => {
+    if (active) {
+      setActive(false);
+    } else {
+      setActive(true);
+    }
+  };
   return (
     <div className="menu">
-      <h1 className="flash">🔦</h1>
+      <h1 className="flash" onClick={handler}>
+        🔦
+        {active ? <Menu className={true} /> : ""}
+      </h1>
     </div>
   );
 };
@@ -18,16 +44,10 @@ export default function LandingSection() {
   return (
     <div className="navdiv">
       <nav className="nav">
-        <div className="brand">Saurabh Jainwal</div>
-        {currentWidth < 1000 ? (
-          <Burger />
-        ) : (
-          <div className="routes">
-            <div className="route">Experience</div>
-            <div className="route">Projects</div>
-            <div className="route">Contact</div>
-          </div>
-        )}
+        <a href="#" className="brand">
+          Saurabh Jainwal
+        </a>
+        {currentWidth < 1400 ? <Burger /> : <Menu className={false} />}
       </nav>
     </div>
   );

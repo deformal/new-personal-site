@@ -13,7 +13,7 @@ export default function Profile(props: TlandingPageProps) {
         <div className="greeting">Hey there 👋 I'm Saurabh Jainwal 👨‍💻</div>
         <div className="sub_greeting">
           Just a passionate individual who love to code 💻 and solve problems
-          with it 🙏.
+          with it. Love ❤️ to cook and play cricket 🏏.
         </div>
       </div>
     </div>

@@ -1,0 +1,31 @@
+import React, { useState } from "react";
+import { FooterData } from "./types";
+export default function Footer(props: { data: FooterData }) {
+  const [data] = useState<FooterData>(props.data);
+  return (
+    <div id="social" className="social_div">
+      <h1 className="social_title">Let's Connect ✌️</h1>
+      <div className="socials">
+        {data.allContactJson.nodes.map((node) => (
+          <div className="social" key={node.id}>
+            <a
+              className="social"
+              key={node.id}
+              href={node.link}
+              target="_blank"
+            >
+              <img src={node.logo} alt="no_picture" className="social_img" />
+            </a>
+          </div>
+        ))}
+      </div>
+      <div className="social_message">
+        <p>👋 Copyright © 2022 Saurabh Jainwal</p>
+        <p>All Rights Reserved.</p>
+        <p className="social_gatsby">
+          Built with <a href="gatsbyjs.com">Gatsby</a>
+        </p>
+      </div>
+    </div>
+  );
+}

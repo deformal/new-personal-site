@@ -1,0 +1,22 @@
+[
+  {
+    "social": "twitter",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/Twitter+social+icons+-+circle+-+blue.png",
+    "link": "https://twitter.com/jainwal_saurabh"
+  },
+  {
+    "social": "linkedIn",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/LI-In-Bug.png",
+    "link": "https://www.linkedin.com/in/saurabh-jainwal-253491225/"
+  },
+  {
+    "social": "github",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/GitHub-Mark-120px-plus.png",
+    "link": "https://github.com/deformal"
+  },
+  {
+    "social": "mail",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/email.png",
+    "link": "mailto:drake9211@gmail.com"
+  }
+]
