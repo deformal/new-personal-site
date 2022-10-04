@@ -288,7 +288,7 @@ html body {
 }
 @media only screen and (max-width: 1000px) {
   .cpy {
-    font-size: 16px;
+    font-size: clamp(14px, 1vw, 1vw);
   }
   .app {
     margin: 0 5vw 0 5vw;
