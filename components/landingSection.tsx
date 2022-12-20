@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 const Menu = (props: { className: boolean }) => {
+  const downloadResume = async () => {};
   return (
     <div className={props.className ? "routes_min" : "routes"}>
       <a href="#experience" className={props.className ? "route_min" : "route"}>
@@ -10,6 +11,13 @@ const Menu = (props: { className: boolean }) => {
       </a>
       <a href="#social" className={props.className ? "route_min" : "route"}>
         Contact 📇
+      </a>
+      <a
+        href="https://wave-runner.s3.ap-south-1.amazonaws.com/SaurabhCV.pdf"
+        target={"_blank"}
+        className={props.className ? "route_min" : "route"}
+      >
+        Resume 🧾
       </a>
     </div>
   );
@@ -47,7 +55,7 @@ export default function LandingSection() {
         <a href="#" className="brand">
           Saurabh Jainwal
         </a>
-        {currentWidth < 1400 ? <Burger /> : <Menu className={false} />}
+        {currentWidth < 1550 ? <Burger /> : <Menu className={false} />}
       </nav>
     </div>
   );
