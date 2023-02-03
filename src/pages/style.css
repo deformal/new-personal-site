@@ -146,8 +146,10 @@ html body {
   gap: 2em;
 }
 .app main .exps .experiencediv .experience .exp_img {
-  height: 5rem;
-  width: 5rem;
+  height: 6rem;
+  width: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .app main .exps .experiencediv .experience .exp_info h4 {
   margin: 0;

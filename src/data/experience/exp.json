@@ -1,9 +1,17 @@
 [
   {
+    "name": "Suplyd",
+    "link": "https://supldy.app",
+    "role": "Senior Backend Engineer",
+    "dates": "Feb 2023 - Present",
+    "job_type": "full time",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/logo-01.png"
+  },
+  {
     "name": "Raftlabs",
     "link": "https://raftlabs.co",
     "role": "Backend Engineer",
-    "dates": "Jan 2022 - Present",
+    "dates": "Jan 2022 - Jan 2023",
     "job_type": "full time",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/raftlabs.png"
   },

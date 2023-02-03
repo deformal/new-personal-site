@@ -142,8 +142,9 @@ html body {
           min-width: 300px;
           gap: 2em;
           .exp_img {
-            height: 5rem;
-            width: 5rem;
+            height: 6rem;
+            width: 6rem;
+            object-fit: contain;
           }
           .exp_info {
             h4 {
