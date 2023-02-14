@@ -13,7 +13,7 @@ const Menu = (props: { className: boolean }) => {
         Contact 📇
       </a>
       <a
-        href="https://wave-runner.s3.ap-south-1.amazonaws.com/SaurabhCV.pdf"
+        href="https://wave-runner.s3.ap-south-1.amazonaws.com/SaurabhCV-2.pdf"
         target={"_blank"}
         className={props.className ? "route_min" : "route"}
       >
