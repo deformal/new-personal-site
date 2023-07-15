@@ -3,7 +3,7 @@
   "editor.fontLigatures": true,
   "editor.fontVariations": true,
   "editor.fontFamily": "Cascadia Mono",
-  "workbench.colorTheme": "Bearded Theme Vivid Black",
+  "workbench.colorTheme": "Atom One Dark",
   "editor.tokenColorCustomizations": {
    "textMateRules": [
     {
