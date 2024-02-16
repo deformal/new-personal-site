@@ -1,5 +1,12 @@
 [
   {
+    "name": "commit-better",
+    "description": "A simple tool do a better commit, which allows better communication between software development teams.",
+    "stack": "Node.JS",
+    "links": "https://github.com/deformal/commit-better",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png"
+  },
+  {
     "name": "Wave Runner",
     "description": "An Android/Pc game built with C# & Unity Engine, about dodging obstacles and collecting points.",
     "stack": "C#, Unity Engine",
