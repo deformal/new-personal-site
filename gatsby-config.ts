@@ -1,13 +1,14 @@
-import type { GatsbyConfig } from 'gatsby'
+import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `new-porftfoliio`,
+    title: `saurabh jainwal`,
     siteUrl: `https://www.saurabhjainwalapi.in`,
+    description: `This is my personal portfolio, for saurabh jainwal.`,
   },
   graphqlTypegen: true,
   plugins: [
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     `gatsby-transformer-json`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -35,6 +36,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-}
+};
 
-export default config
+export default config;

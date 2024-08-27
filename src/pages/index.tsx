@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import LandingSection from "../../components/landingSection";
-import Profile from "../../components/profile";
-import Data from "../../components/data";
+import LandingSection from "../components/landingSection";
+import Profile from "../components/profile";
+import Data from "../components/data";
+import { SEO } from "../components/seo";
 import "./style.css";
 import { StaticQuery, graphql } from "gatsby";
+
 export default function Home() {
   return (
     <div className="app">
@@ -63,14 +65,5 @@ export default function Home() {
   );
 }
 export const Head = () => {
-  return (
-    <>
-      <link
-        rel="icon"
-        type="image/x-icon"
-        href="https://wave-runner.s3.ap-south-1.amazonaws.com/gitProfile.ico"
-      />
-      <title>saurabhjainwalapi.in</title>
-    </>
-  );
+  return <SEO />;
 };
