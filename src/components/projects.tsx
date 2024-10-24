@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DataProps, DownloadButton, ProjectData } from "./types";
+
 const Download = (props: DownloadButton) => {
   return (
     <a type="button" className="download_btn" href={props.link}>
@@ -8,6 +9,7 @@ const Download = (props: DownloadButton) => {
     </a>
   );
 };
+
 const Link = (props: { link: string }) => {
   return (
     <a className="git_link" href={props.link} target="_blank">
@@ -20,9 +22,11 @@ const Link = (props: { link: string }) => {
     </a>
   );
 };
+
+
 export default function Projects(props: { data: ProjectData }) {
   return (
-    <div id="projects" className="projects">
+  KAST 🚀- Documentation  <div id="projects" className="projects">
       <h1 className="prj_title">Projects 📽</h1>
       <div className="prjdiv">
         {props.data.allProjectJson.nodes.map((node) => (
