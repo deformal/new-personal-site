@@ -6,10 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap');
 
-// $font-family: "Monomaniac One", sans-serif;
 $font-family: "Monomakh", system-ui;
-//$font-family: "Ponomar", system-ui;
-// $font-family: "Noto Sans Tagalog", sans-serif;
 
 $project-border: .5px solid grey;
 $project-border-radius: 10px;
@@ -153,8 +150,8 @@ html body {
         justify-content: center;
         .experience {
           flex-basis: 40%;
-          border: 1px solid gray;
-          border-radius: 10px;
+          border: $project-border;
+          border-radius: $project-border-radius;
           padding: 1em;
           display: flex;
           flex-direction: row;
