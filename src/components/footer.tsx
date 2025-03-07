@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FooterData } from "./types";
+
 export default function Footer(props: { data: FooterData }) {
   const [data] = useState<FooterData>(props.data);
   return (
@@ -20,7 +21,7 @@ export default function Footer(props: { data: FooterData }) {
         ))}
       </div>
       <div className="social_message">
-        <p className="cpy">👋 Copyright © 2024 Saurabh Jainwal</p>
+        <p className="cpy">👋 Copyright © 2022 Saurabh Jainwal</p>
         <p>All Rights Reserved.</p>
         <p className="social_gatsby">
           Built with <a href="gatsbyjs.com">Gatsby</a>
