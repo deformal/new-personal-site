@@ -2,24 +2,26 @@ import React from "react";
 import LandingSection from "../components/landingSection";
 import Profile from "../components/profile";
 import Data from "../components/data";
-import {SEO} from "../components/seo";
-import {graphql, StaticQuery} from "gatsby";
+import { SEO } from "../components/seo";
+import { graphql, StaticQuery } from "gatsby";
 import "./style.css";
 
 export default function Home() {
-    return (
-        <div className="app">
-            <header>
-                <LandingSection/>
-            </header>
-            <aside>
-                <Profile
-                    imageref={"https://wave-runner.s3.ap-south-1.amazonaws.com/me.png"}
-                />
-            </aside>
-            <main>
-                <StaticQuery
-                    query={graphql`
+  return (
+    <div className="app">
+      <header>
+        <LandingSection />
+      </header>
+      <aside>
+        <Profile
+          imageref={
+            "https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/me-removebg-preview+(3).png"
+          }
+        />
+      </aside>
+      <main>
+        <StaticQuery
+          query={graphql`
             query {
               allExpJson {
                 nodes {
@@ -57,13 +59,13 @@ export default function Home() {
               }
             }
           `}
-                    render={(data) => <Data data={data}/>}
-                />
-            </main>
-            <br/>
-        </div>
-    );
+          render={(data) => <Data data={data} />}
+        />
+      </main>
+      <br />
+    </div>
+  );
 }
 export const Head = () => {
-    return <SEO/>;
+  return <SEO />;
 };

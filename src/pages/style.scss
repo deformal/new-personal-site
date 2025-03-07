@@ -1,12 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
-$font-family: "Roboto Mono", monospace;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap');
+
+// $font-family: "Monomaniac One", sans-serif;
+$font-family: "Monomakh", system-ui;
+//$font-family: "Ponomar", system-ui;
+// $font-family: "Noto Sans Tagalog", sans-serif;
+
+$project-border: .5px solid grey;
+$project-border-radius: 10px;
+$project-btn-border: .5px solid grey;
+$project-btn-border-radius: 10px;
+
+$font-color: black;
+
 html body {
   height: 100vh;
+  background-color: #FFFDEC;
 }
 .app {
   font-family: $font-family;
   height: 100%;
   margin: 0 15vw 0 15vw;
+  color: $font-color;
   header {
     display: flex;
     align-items: center;
@@ -33,7 +53,7 @@ html body {
             .route_min {
               font-size: 0.5em;
               text-decoration: none;
-              color: black;
+              color: $font-color;
             }
           }
         }
@@ -45,9 +65,10 @@ html body {
         justify-content: space-between;
         .brand {
           font-size: 1.5em;
+          font-weight: bold;
           cursor: pointer;
           text-decoration: none;
-          color: black;
+          color: $font-color;
         }
         .routes {
           margin: 0;
@@ -59,7 +80,7 @@ html body {
             cursor: pointer;
             font-size: 1.2em;
             text-decoration: none;
-            color: black;
+            color: $font-color;
           }
         }
       }
@@ -132,8 +153,8 @@ html body {
         justify-content: center;
         .experience {
           flex-basis: 40%;
-          border: 1px solid grey;
-          border-radius: 5px;
+          border: 1px solid gray;
+          border-radius: 10px;
           padding: 1em;
           display: flex;
           flex-direction: row;
@@ -160,8 +181,9 @@ html body {
     .projects {
       width: 100%;
       .prj_title {
+        font-size: 2em;
         text-align: center;
-        margin-bottom: 4em;
+        margin-bottom: 3em;
       }
       .prjdiv {
         width: 100%;
@@ -172,13 +194,13 @@ html body {
         justify-content: center;
         .prj {
           flex-basis: 100%;
-          border: 1px solid grey;
-          border-radius: 5px;
+          border: $project-border;
+          border-radius: $project-border-radius;
           padding: 1em;
           display: flex;
           flex-direction: column;
           justify-content: baseline;
-          gap: 2em;
+          gap: 1em;
           .prj_img {
             height: 6rem;
             width: 6rem;
@@ -202,13 +224,13 @@ html body {
               align-items: center;
               gap: 0.5em;
               text-decoration: none;
-              color: Black;
+              color: $font-color;
               font-weight: bold;
               font-size: 1.2em;
-              border: 1px solid black;
               max-width: max-content;
+              border: $project-btn-border;
+              border-radius: $project-btn-border-radius;
               padding: 10px;
-              border-radius: 5px;
               .git_img {
                 height: 2rem;
                 width: 2rem;
@@ -219,18 +241,18 @@ html body {
             }
             .download_btn {
               text-decoration: none;
-              color: black;
+              color: $font-color;
               cursor: pointer;
               display: flex;
               align-items: center;
               gap: 0.5em;
               width: max-content;
               background-color: transparent;
-              border: 1px solid black;
-              border-radius: 5px;
               padding: 10px;
               font-family: $font-family;
               font-weight: bold;
+              border: $project-btn-border;
+              border-radius: $project-btn-border-radius;
               .git_img {
                 height: 2rem;
                 width: 2rem;

@@ -1,12 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ponomar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap");
 html body {
   height: 100vh;
+  background-color: #FFFDEC;
 }
 
 .app {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Monomakh", system-ui;
   height: 100%;
   margin: 0 15vw 0 15vw;
+  color: black;
 }
 .app header {
   display: flex;
@@ -47,6 +55,7 @@ html body {
 }
 .app header .navdiv .nav .brand {
   font-size: 1.5em;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   color: black;
@@ -135,8 +144,8 @@ html body {
 }
 .app main .exps .experiencediv .experience {
   flex-basis: 40%;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -161,8 +170,9 @@ html body {
   width: 100%;
 }
 .app main .projects .prj_title {
+  font-size: 2em;
   text-align: center;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 .app main .projects .prjdiv {
   width: 100%;
@@ -175,13 +185,13 @@ html body {
 }
 .app main .projects .prjdiv .prj {
   flex-basis: 100%;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 0.5px solid grey;
+  border-radius: 10px;
   padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
-  gap: 2em;
+  gap: 1em;
 }
 .app main .projects .prjdiv .prj .prj_img {
   height: 6rem;
@@ -207,15 +217,14 @@ html body {
   align-items: center;
   gap: 0.5em;
   text-decoration: none;
-  color: Black;
+  color: black;
   font-weight: bold;
   font-size: 1.2em;
-  border: 1px solid black;
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  border: 0.5px solid grey;
+  border-radius: 10px;
   padding: 10px;
-  border-radius: 5px;
 }
 .app main .projects .prjdiv .prj .prj_info .git_link .git_img {
   height: 2rem;
@@ -231,15 +240,14 @@ html body {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   background-color: transparent;
-  border: 1px solid black;
-  border-radius: 5px;
   padding: 10px;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Monomakh", system-ui;
   font-weight: bold;
+  border: 0.5px solid grey;
+  border-radius: 10px;
 }
 .app main .projects .prjdiv .prj .prj_info .download_btn .git_img {
   height: 2rem;
