@@ -5,7 +5,7 @@ import Data from "../components/data";
 import { SEO } from "../components/seo";
 import { graphql, StaticQuery } from "gatsby";
 import "./style.css";
-
+// https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/IMG_3741.JPG
 export default function Home() {
   return (
     <div className="app">
@@ -15,7 +15,7 @@ export default function Home() {
       <aside>
         <Profile
           imageref={
-            "https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/me-removebg-preview+(3).png"
+            "https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/me-removebg-preview+(1).png"
           }
         />
       </aside>
