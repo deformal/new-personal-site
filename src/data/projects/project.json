@@ -1,7 +1,14 @@
 [
   {
+    "name": "KastQL",
+    "description": " A full fledged GraphQL engine, with a very dev friendly setup and an awesome cli tool.",
+    "stack": "Go, Sqlite, Redis, GraphQl, Next.js",
+    "links": "https://github.com/deformal/kastql",
+    "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png"
+  },
+  {
     "name": "commit-better",
-    "description": "A simple tool do a better commit, which allows better communication between software development teams.",
+    "description": " A full fledged GraphQL engine, with a very dev friendly setup and an awesome cli tool.",
     "stack": "Node.JS",
     "links": "https://github.com/deformal/commit-better",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png"
