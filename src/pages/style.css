@@ -5,47 +5,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ponomar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
 html body {
   height: 100vh;
-  background-color: white;
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .app {
-  font-family: "Roboto Mono", system-ui;
-  height: 100%;
-  margin: 0 15vw 0 15vw;
-  color: #06202b;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  margin: 0;
+  color: #ffffff;
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
 }
 .app header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 .app header .navdiv {
   width: 100%;
-}
-.app header .navdiv .menu .flash {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.app header .navdiv .menu .flash .routes_min {
-  background-color: rgb(244, 244, 244);
-  border-radius: 5px;
-  padding: 10px;
-  top: 2em;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.app header .navdiv .menu .flash .routes_min .route_min {
-  font-size: 0.5em;
-  text-decoration: none;
-  color: #06202b;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 .app header .navdiv .nav {
   display: flex;
@@ -54,250 +54,614 @@ html body {
   justify-content: space-between;
 }
 .app header .navdiv .nav .brand {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
-  color: #06202b;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+.app header .navdiv .nav .brand:hover {
+  transform: scale(1.05);
 }
 .app header .navdiv .nav .routes {
   margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2em;
+  gap: 2rem;
 }
 .app header .navdiv .nav .routes .route {
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1rem;
   text-decoration: none;
-  color: #06202b;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
 }
-.app aside {
-  margin-top: 10em;
+.app header .navdiv .nav .routes .route::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  transition: width 0.3s ease;
+}
+.app header .navdiv .nav .routes .route:hover {
+  color: #ffffff;
+  background: rgba(59, 130, 246, 0.05);
+}
+.app header .navdiv .nav .routes .route:hover::after {
+  width: 100%;
+}
+.app .main-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+.app .main-content .profile-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 30%;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  background: #0f0f0f;
 }
-.app aside .profilediv {
+.app .main-content .profile-section .profilediv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3em;
+  gap: 2rem;
 }
-.app aside .profilediv .image img {
+.app .main-content .profile-section .profilediv .image img {
   object-fit: cover;
-  height: 20rem;
-  width: 20rem;
-  border-radius: 100%;
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  border: 4px solid #4df7ff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: block;
 }
-.app aside .info {
+.app .main-content .profile-section .profilediv .image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+}
+.app .main-content .profile-section .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   gap: 1rem;
 }
-.app aside .info .greeting {
-  font-size: clamp(20px, 2vw, 2vw);
+.app .main-content .profile-section .info .greeting {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
 }
-.app aside .info .sub_greeting {
-  color: grey;
+.app .main-content .profile-section .info .sub_greeting {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+}
+.app .main-content .profile-section .contact-section {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.app .main-content .profile-section .contact-section .contact-title {
   font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
 }
-.app main {
+.app .main-content .profile-section .contact-section .socials {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
-.app main .exps {
+.app .main-content .profile-section .contact-section .socials .social {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.app .main-content .profile-section .contact-section .socials .social:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+.app .main-content .profile-section .contact-section .socials .social .social_img {
+  height: 1.8rem;
+  width: 1.8rem;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+.app .main-content .profile-section .contact-section .contact-message {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.app .main-content .profile-section .contact-section .contact-message p {
+  margin: 0.3rem 0;
+  opacity: 1;
+  visibility: visible;
+}
+.app .main-content .profile-section .contact-section .contact-message a {
+  color: #4df7ff;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 1;
+  visibility: visible;
+}
+.app .main-content .profile-section .contact-section .contact-message a:hover {
+  text-decoration: underline;
+}
+.app .main-content .content-section {
+  overflow-y: auto;
+  padding-right: 1rem;
+  background: #0f0f0f;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.app .main-content .content-section::-webkit-scrollbar {
+  display: none;
+}
+.app .main-content .content-section .exps {
   width: 100%;
-  margin-bottom: 20vh;
+  margin-bottom: 4rem;
 }
-.app main .exps .exp_title {
+.app .main-content .content-section .exps .exp_title {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   row-gap: 0.5em;
   column-gap: 0.5em;
   flex-wrap: wrap;
-  margin-bottom: 4em;
+  margin-bottom: 2rem;
 }
-.app main .exps .exp_title .exp_sidenote {
+.app .main-content .content-section .exps .exp_title .exp_sidenote {
   margin: 0;
   font-size: 1rem;
+  color: #e0e0e0;
 }
-.app main .exps .experiencediv {
+.app .main-content .content-section .exps .experiencediv {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 2em;
-  column-gap: 2em;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
-.app main .exps .experiencediv .experience {
-  flex-basis: 40%;
-  border: 0.5px solid grey;
-  border-radius: 10px;
-  padding: 1em;
+.app .main-content .content-section .exps .experiencediv .experience {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: baseline;
   align-items: center;
-  min-width: 300px;
-  gap: 2em;
+  gap: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
-.app main .exps .experiencediv .experience .exp_img {
+.app .main-content .content-section .exps .experiencediv .experience:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+.app .main-content .content-section .exps .experiencediv .experience .exp_img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #2a2a2a;
+  padding: 0.8rem;
+}
+.app .main-content .content-section .exps .experiencediv .experience .exp_info h4 {
+  margin: 0;
+  color: #ffffff;
+}
+.app .main-content .content-section .exps .experiencediv .experience .exp_info .exp_name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.app .main-content .content-section .projects {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.app .main-content .content-section .projects .prj_title {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.app .main-content .content-section .projects .prjdiv {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+.app .main-content .content-section .projects .prjdiv .prj {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.app .main-content .content-section .projects .prjdiv .prj:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.app .main-content .content-section .projects .prjdiv .prj .prj_img {
   height: 6rem;
   width: 6rem;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: #2a2a2a;
+  padding: 0.8rem;
+  align-self: flex-start;
 }
-.app main .exps .experiencediv .experience .exp_info h4 {
+.app .main-content .content-section .projects .prjdiv .prj .prj_img:hover {
+  transform: scale(1.05);
+}
+.app .main-content .content-section .projects .prjdiv .prj .prj_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.app .main-content .content-section .projects .prjdiv .prj .prj_info h4 {
   margin: 0;
 }
-.app main .exps .experiencediv .experience .exp_info .exp_name {
-  font-size: 1.5rem;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_name {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+  color: #4df7ff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.5px;
 }
-.app main .projects {
-  width: 100%;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_description {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.app main .projects .prj_title {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 3em;
-}
-.app main .projects .prjdiv {
-  width: 100%;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_stack {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.8em;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 2em;
-  column-gap: 2em;
-  justify-content: center;
+  gap: 0.3em;
 }
-.app main .projects .prjdiv .prj {
-  flex-basis: 100%;
-  border: 0.5px solid grey;
-  border-radius: 10px;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  gap: 1em;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_stack .tech-badge {
+  color: #b0b0b0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
 }
-.app main .projects .prjdiv .prj .prj_img {
-  height: 6rem;
-  width: 6rem;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  color: white;
 }
-.app main .projects .prjdiv .prj .prj_info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
-.app main .projects .prjdiv .prj .prj_info h4 {
-  margin: 0;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status:hover::before {
+  left: 100%;
 }
-.app main .projects .prjdiv .prj .prj_info .prj_name {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=completed], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=live], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=finished] {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
 }
-.app main .projects .prjdiv .prj .prj_info .prj_description {
-  font-size: clamp(16px, 1.1vw, 1.1vw);
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=progress], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=development], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=working] {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: white;
 }
-.app main .projects .prjdiv .prj .prj_info .git_link {
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=planning], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=design], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=concept] {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+}
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=archived], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=discontinued], .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_status[data-status*=old] {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+}
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .git_link {
   display: flex;
   align-items: center;
   gap: 0.5em;
   text-decoration: none;
-  color: #06202b;
-  font-weight: bold;
-  font-size: 1.2em;
-  max-width: max-content;
-  border: 0.5px solid grey;
-  border-radius: 10px;
-  padding: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  width: fit-content;
+  background: #2a2a2a;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.app main .projects .prjdiv .prj .prj_info .git_link .git_img {
-  height: 2rem;
-  width: 2rem;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .git_link .git_img {
+  height: 1.2rem;
+  width: 1.2rem;
+  filter: brightness(0) invert(1);
 }
-.app main .projects .prjdiv .prj .prj_info .git_link:hover {
-  transform: scale(1.04);
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .git_link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #1a1a1a;
+  border-color: #4df7ff;
 }
-.app main .projects .prjdiv .prj .prj_info .download_btn {
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .download_btn {
   text-decoration: none;
-  color: #06202b;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5em;
   width: max-content;
-  background-color: transparent;
-  padding: 10px;
-  font-family: "Roboto Mono", system-ui;
-  font-weight: bold;
-  border: 0.5px solid grey;
-  border-radius: 10px;
+  background: #2a2a2a;
+  padding: 8px 16px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.app main .projects .prjdiv .prj .prj_info .download_btn .git_img {
-  height: 2rem;
-  width: 2rem;
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .download_btn .git_img {
+  height: 1rem;
+  width: 1rem;
+  filter: brightness(0) invert(1);
 }
-.app main .projects .prjdiv .prj .prj_info .download_btn:hover {
-  transform: scale(1.04);
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .download_btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #1a1a1a;
+  border-color: #4df7ff;
 }
-.app main .social_div {
-  margin-top: 10em;
+.app .main-content .content-section .social_div {
+  width: 100%;
 }
-.app main .social_div .social_title {
-  font-weight: lighter;
-  text-align: center;
+.app .main-content .content-section .social_div .social_title {
+  font-weight: 600;
+  text-align: left;
   margin: 0;
   font-size: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #4df7ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.app main .social_div .socials {
-  margin-top: 2em;
+.app .main-content .content-section .social_div .socials {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 2rem;
 }
-.app main .social_div .socials .social {
+.app .main-content .content-section .social_div .socials .social {
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-.app main .social_div .socials .social .social_img {
-  height: 2.2rem;
-  width: 2.2rem;
+.app .main-content .content-section .social_div .socials .social:hover {
+  transform: translateY(-3px) scale(1.1);
 }
-.app main .social_div .social_message {
-  margin-top: 2em;
+.app .main-content .content-section .social_div .socials .social .social_img {
+  height: 2rem;
+  width: 2rem;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+.app .main-content .content-section .social_div .social_message {
+  margin-top: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 }
-.app main .social_div .social_message p {
+.app .main-content .content-section .social_div .social_message p {
   margin: 0;
+  color: #e0e0e0;
+  font-size: 1rem;
 }
-.app main .social_div .social_message .social_mail {
-  color: skyblue;
+.app .main-content .content-section .social_div .social_message .social_mail {
+  color: #4df7ff;
+  font-weight: 600;
 }
-.app main .social_div .social_message .social_gatsby a {
-  color: skyblue;
+.app .main-content .content-section .social_div .social_message .social_gatsby a {
+  color: #4df7ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.app .main-content .content-section .social_div .social_message .social_gatsby a:hover {
+  text-decoration: underline;
 }
 
-@media only screen and (max-width: 1000px) {
-  .cpy {
-    font-size: clamp(14px, 1vw, 1vw);
+@media only screen and (max-width: 1200px) {
+  .app .main-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    overflow: visible;
   }
+  .app .main-content .profile-section {
+    padding: 2rem 0;
+  }
+  .app .main-content .profile-section .profilediv .image img {
+    height: 15rem;
+    width: 15rem;
+  }
+  .app .main-content .profile-section .info .greeting {
+    font-size: 1.5rem;
+  }
+  .app .main-content .content-section {
+    overflow: visible;
+    padding: 0;
+  }
+  .app .main-content .content-section .exps .experiencediv {
+    grid-template-columns: 1fr;
+  }
+  .app .main-content .content-section .projects .prjdiv {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 768px) {
   .app {
-    margin: 0 5vw 0 5vw;
+    margin: 0;
+  }
+  .app header .navdiv {
+    padding: 0 1rem;
+  }
+  .app header .navdiv .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .app header .navdiv .nav .brand {
+    font-size: 1.5em;
+  }
+  .app header .navdiv .nav .routes {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .app header .navdiv .nav .routes .route {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .app .main-content {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .app .main-content .profile-section .profilediv .image img {
+    height: 12rem;
+    width: 12rem;
+  }
+  .app .main-content .profile-section .info .greeting {
+    font-size: 1.3rem;
+  }
+  .app .main-content .profile-section .info .sub_greeting {
+    font-size: 0.9rem;
+  }
+  .app .main-content .content-section .exps .experiencediv .experience {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .app .main-content .content-section .exps .experiencediv .experience .exp_img {
+    height: 4rem;
+    width: 4rem;
+  }
+  .app .main-content .content-section .exps .experiencediv .experience .exp_info .exp_name {
+    font-size: 1.1rem;
+  }
+  .app .main-content .content-section .projects .prjdiv .prj {
+    padding: 1rem;
+  }
+  .app .main-content .content-section .projects .prjdiv .prj .prj_img {
+    height: 5rem;
+    width: 5rem;
+  }
+  .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_name {
+    font-size: 1.5rem;
+  }
+  .app .main-content .content-section .projects .prjdiv .prj .prj_info .git_link,
+.app .main-content .content-section .projects .prjdiv .prj .prj_info .download_btn {
+    align-self: center;
   }
   .routes_min {
     right: 1em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .app header .navdiv .nav .routes {
+    gap: 0.5rem;
+  }
+  .app header .navdiv .nav .routes .route {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

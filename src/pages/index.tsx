@@ -12,17 +12,18 @@ export default function Home() {
       <header>
         <LandingSection />
       </header>
-      <aside>
-        <Profile
-          imageref={
-            "https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/me-removebg-preview+(1).png"
-          }
-        />
-      </aside>
-      <main>
+      <div className="main-content">
         <StaticQuery
           query={graphql`
-            query {
+            query AllData {
+              allContactJson {
+                nodes {
+                  id
+                  logo
+                  link
+                  social
+                }
+              }
               allExpJson {
                 nodes {
                   job_type
@@ -40,6 +41,7 @@ export default function Home() {
                   name
                   description
                   stack
+                  status
                   links
                   logo
                   downloads {
@@ -49,20 +51,31 @@ export default function Home() {
                   }
                 }
               }
-              allContactJson {
+              allProfileJson {
                 nodes {
-                  id
-                  logo
-                  link
-                  social
+                  name
+                  image
+                  greeting
+                  sub_greeting
                 }
               }
             }
           `}
-          render={(data) => <Data data={data} />}
+          render={(data) => (
+            <>
+              <aside className="profile-section">
+                <Profile
+                  contactData={data}
+                  profileData={data}
+                />
+              </aside>
+              <main className="content-section">
+                <Data data={data} />
+              </main>
+            </>
+          )}
         />
-      </main>
-      <br />
+      </div>
     </div>
   );
 }

@@ -31,6 +31,7 @@ export interface DataProps {
         description: string
         stack: string
         logo: string
+        status: string
         downloads: [
           {
             link: string
@@ -82,6 +83,7 @@ export type ProjectData = {
       description: string
       stack: string
       logo: string
+      status: string
       downloads: [
         {
           link: string
