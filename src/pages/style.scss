@@ -168,6 +168,7 @@ html body {
             justify-content: flex-start;
             padding-top: 2rem;
             background: $bg-primary;
+            transition: all 0.3s ease;
 
             .profilediv {
                 display: flex;
@@ -293,6 +294,12 @@ html body {
             overflow-y: auto;
             padding-right: 1rem;
             background: $bg-primary;
+            transition: all 0.3s ease;
+
+            &.blurred {
+                filter: blur(2px);
+                opacity: 0.7;
+            }
 
             /* Hide scrollbar for Chrome, Safari and Opera */
             &::-webkit-scrollbar {
@@ -308,6 +315,12 @@ html body {
             .exps {
                 width: 100%;
                 margin-bottom: 4rem;
+                transition: all 0.3s ease;
+
+                &.blurred {
+                    filter: blur(2px);
+                    opacity: 0.7;
+                }
 
                 .exp_title {
                     display: flex;
@@ -383,6 +396,14 @@ html body {
             .projects {
                 width: 100%;
                 margin-bottom: 4rem;
+                transition: all 0.3s ease;
+                filter: blur(2px);
+                opacity: 0.7;
+
+                &:hover {
+                    filter: none;
+                    opacity: 1;
+                }
 
                 .prj_title {
                     font-size: 2rem;
@@ -611,6 +632,14 @@ html body {
 
             .social_div {
                 width: 100%;
+                transition: all 0.3s ease;
+                filter: blur(2px);
+                opacity: 0.7;
+
+                &:hover {
+                    filter: none;
+                    opacity: 1;
+                }
 
                 .social_title {
                     font-weight: 600;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FooterData } from "./types";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -14,6 +14,32 @@ export default function Profile(props: TlandingPageProps) {
     console.log('Profile data:', props.profileData);
     
     const profile = props.profileData?.allProfileJson?.nodes?.[0];
+    
+    useEffect(() => {
+        const projectsSection = document.querySelector('.projects');
+        const expsSection = document.querySelector('.exps');
+        
+        if (projectsSection && expsSection) {
+            projectsSection.addEventListener('mouseenter', () => {
+                expsSection.classList.add('blurred');
+            });
+            
+            projectsSection.addEventListener('mouseleave', () => {
+                expsSection.classList.remove('blurred');
+            });
+        }
+        
+        return () => {
+            if (projectsSection && expsSection) {
+                projectsSection.removeEventListener('mouseenter', () => {
+                    expsSection.classList.add('blurred');
+                });
+                projectsSection.removeEventListener('mouseleave', () => {
+                    expsSection.classList.remove('blurred');
+                });
+            }
+        };
+    }, []);
     
     return (
         <div className="profilediv">
