@@ -11,7 +11,7 @@ const Menu = () => {
         Projects ⚙️
       </a>
       <a
-        href="https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/resume.pdf"
+        href="https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/resume+-+new.pdf"
         target={"_blank"}
         className="route"
       >
