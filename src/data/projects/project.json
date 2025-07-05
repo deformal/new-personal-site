@@ -3,7 +3,7 @@
     "name": "KastQL",
     "description": " A full fledged GraphQL engine, with a very dev friendly setup and an awesome cli tool.",
     "stack": "Go, Sqlite, Redis, GraphQl, Next.js",
-    "links": "https://github.com/deformal/kastql",
+    "github": "https://github.com/deformal/kastql",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png",
     "status": "In Progress"
   },
@@ -11,9 +11,16 @@
     "name": "commit-better",
     "description": "A cli tool to generate a commit message, to make commit messages more descriptive and meaningful.",
     "stack": "Node.JS",
-    "links": "https://github.com/deformal/commit-better",
+    "github": "https://github.com/deformal/commit-better",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png",
-    "status": "Completed"
+    "status": "Completed",
+    "downloads": [
+      {
+        "link": "https://www.npmjs.com/package/commit-better",
+        "type": "npm",
+        "logo": "npm.png"
+      }
+    ]
   },
   {
     "name": "Wave Runner",
@@ -23,12 +30,12 @@
       {
         "link": "https://wave-runner.s3.ap-south-1.amazonaws.com/WaveApk.apk",
         "type": "android",
-        "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/android.png"
+        "logo": "android.png"
       },
       {
         "link": "https://wave-runner.s3.ap-south-1.amazonaws.com/WavePc.zip",
         "type": "pc",
-        "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/windows.png"
+        "logo": "windows.png"
       }
     ],
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/unity.png",
@@ -38,7 +45,7 @@
     "name": "TGP",
     "description": "Node cli tool that quickly sets up a Typescript based GraphQl server which uses Apollo for GraphQl and Prisma as orm.",
     "stack": "Node.JS",
-    "links": "https://github.com/deformal/tgp",
+    "github": "https://github.com/deformal/tgp",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png",
     "status": "Completed"
   },
@@ -46,7 +53,7 @@
     "name": "SJ-server-client",
     "description": "A cli tool to create a basic express and react template, folder structure for beginners.",
     "stack": "Node.JS",
-    "links": "https://github.com/deformal/sj-server-client",
+    "github": "https://github.com/deformal/sj-server-client",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/file.png",
     "status": "Completed"
   },
@@ -54,7 +61,7 @@
     "name": "Issue-Tracker",
     "description": "A graphql based issue tracking web application. Built with SSR-React, GraphQl, Express.",
     "stack": "Node, MongoDB, GraphQl",
-    "links": "https://github.com/deformal/The-Issue-Tracker-app.git",
+    "github": "https://github.com/deformal/The-Issue-Tracker-app.git",
     "logo": "https://wave-runner.s3.ap-south-1.amazonaws.com/node-js.png",
     "status": "Completed"
   }

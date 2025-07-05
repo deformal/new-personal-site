@@ -27,7 +27,7 @@ export interface DataProps {
       nodes: Array<{
         id: string
         name: string
-        links: string
+        github: string
         description: string
         stack: string
         logo: string
@@ -79,7 +79,7 @@ export type ProjectData = {
     nodes: Array<{
       id: string
       name: string
-      links: string
+      github: string
       description: string
       stack: string
       logo: string
