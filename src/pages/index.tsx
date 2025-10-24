@@ -5,7 +5,6 @@ import Data from "../components/data";
 import { SEO } from "../components/seo";
 import { graphql, StaticQuery } from "gatsby";
 import "./style.css";
-import { mainQuery } from "../graphql/main-query";
 export default function Home() {
   return (
     <div className="app">
