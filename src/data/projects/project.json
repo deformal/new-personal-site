@@ -1,5 +1,20 @@
 [
   {
+    "name": "Sleepy Nights",
+    "description": "A Vs Code theme thats for those of us who like to code at night, with warm colors and less contrast, so it's easy on the eys plus works really well with low brightness.",
+    "stack": "Vs Code, JSON",
+    "github": "https://github.com/deformal/sleepy-nights",
+    "logo": "https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/icon.png",
+    "status": "Completed",
+    "downloads": [
+      {
+        "link": "https://marketplace.visualstudio.com/items?itemName=deformal.sleepy-nights#review-details",
+        "type": "vs-code-ext",
+        "logo": "vscode.png"
+      }
+    ]
+  },
+  {
     "name": "KastQL",
     "description": " A full fledged GraphQL engine, with a very dev friendly setup and an awesome cli tool.",
     "stack": "Go, Sqlite, Redis, GraphQl, Next.js",
