@@ -2,6 +2,30 @@ import React, { useEffect } from "react";
 import { FooterData } from "./types";
 import { StaticQuery, graphql } from "gatsby";
 import myImage from "../images/profile.jpg";
+import twitter from "../images/x.png";
+import linkedIn from "../images/linkedin.png";
+import github from "../images/github-sign.png";
+import email from "../images/email.png";
+
+const getLocalImage = (imagePath: string) => {
+  if (
+    imagePath.startsWith("/") ||
+    imagePath.startsWith("./") ||
+    imagePath.startsWith("../")
+  ) {
+    return imagePath;
+  }
+
+  const imageMap: { [key: string]: string } = {
+    "x.png": twitter,
+    "linkedin.png": linkedIn,
+    "github-sign.png": github,
+    "email.png": email
+  };
+
+  const filename = imagePath.split("/").pop() || imagePath;
+  return imageMap[filename] || imagePath;
+};
 
 type TlandingPageProps = {
   contactData?: FooterData;
@@ -74,7 +98,11 @@ export default function Profile(props: TlandingPageProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={node.logo} alt="social" className="social_img" />
+                  <img
+                    src={getLocalImage(node.logo)}
+                    alt="social"
+                    className="social_img"
+                  />
                 </a>
               </div>
             ))}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FooterData } from "./types";
+import twitter from "../images/x.png";
 
 export default function Footer(props: { data: FooterData }) {
   const [data] = useState<FooterData>(props.data);
   return (
     <div id="social" className="social_div">
-      <h1 className="social_title">Let's Connect ✌️</h1>
+      <h1 className="social_title">Let's Con ✌️</h1>
       <div className="socials">
         {data.allContactJson.nodes.map((node) => (
           <div className="social" key={node.id}>
@@ -15,7 +16,7 @@ export default function Footer(props: { data: FooterData }) {
               href={node.link}
               target="_blank"
             >
-              <img src={node.logo} alt="no_picture" className="social_img" />
+              <img src={twitter} alt="no_picture" className="social_img" />
             </a>
           </div>
         ))}

@@ -5,17 +5,17 @@ const Menu = () => {
   return (
     <div className="routes">
       <a href="#experience" className="route">
-        Experience 📖
+        Experience
       </a>
       <a href="#projects" className="route">
-        Projects ⚙️
+        Projects
       </a>
       <a
         href="https://s3.ap-south-1.amazonaws.com/saurabhjainwal.dev/resume+-+new.pdf"
         target={"_blank"}
         className="route"
       >
-        Resume 🧾
+        Resume
       </a>
     </div>
   );

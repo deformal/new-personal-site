@@ -6,11 +6,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ponomar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
 html body {
   height: 100vh;
   background: #0f0f0f;
   color: #ffffff;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   overflow-x: hidden;
 }
 
@@ -19,7 +20,7 @@ html body {
 }
 
 .app {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   height: 100vh;
   margin: 0;
   color: #ffffff;
@@ -116,7 +117,7 @@ html body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 2rem;
+  padding-top: 8rem;
   background: #0f0f0f;
   transition: all 0.3s ease;
 }
@@ -310,7 +311,7 @@ html body {
   margin-bottom: 2rem;
   color: #ffffff;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
 }
 .app .main-content .content-section .projects .prjdiv {
   width: 100%;
@@ -361,7 +362,7 @@ html body {
   margin-bottom: 0.3em;
   color: #4df7ff;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   letter-spacing: -0.5px;
 }
 .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_description {
@@ -370,7 +371,7 @@ html body {
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 0.3em;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
 }
 .app .main-content .content-section .projects .prjdiv .prj .prj_info .prj_stack {
   font-size: 0.9rem;
@@ -378,7 +379,7 @@ html body {
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 0.8em;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 0.3em;
@@ -398,7 +399,7 @@ html body {
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 1rem;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -472,7 +473,7 @@ html body {
   width: max-content;
   background: #2a2a2a;
   padding: 8px 16px;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 20px;

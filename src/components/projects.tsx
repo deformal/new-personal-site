@@ -66,7 +66,7 @@ const Github = (props: { link: string }) => {
 export default function Projects(props: { data: ProjectData }) {
   return (
     <div id="projects" className="projects">
-      <h1 className="prj_title">Projects 📽</h1>
+      <h1 className="prj_title">Experiments</h1>
       <div className="prjdiv">
         {props.data.allProjectJson.nodes.map((node) => (
           <div className="prj" key={node.id}>
